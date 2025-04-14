@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - ArtAble</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Additional styles specific to the about page */
+      .about-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .about-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .about-header h1 {
+        font-size: 2.5rem;
+        color: #0078d7;
+        margin-bottom: 15px;
+      }
+
+      .about-section {
+        margin-bottom: 50px;
+      }
+
+      .about-section h2 {
+        color: #0078d7;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #eaeaea;
+        padding-bottom: 10px;
+      }
+
+      .about-section p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .team-member {
+        text-align: center;
+      }
+
+      .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 3px solid #0078d7;
+      }
+
+      .team-member h3 {
+        margin: 10px 0 5px;
+      }
+
+      .team-member p {
+        font-style: italic;
+        color: #666;
+        margin: 0;
+      }
+
+      .mission-values {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .value-card {
+        background-color: #f6f6f6;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .value-card h3 {
+        color: #0078d7;
+        margin-top: 0;
+      }
+
+      .testimonials {
+        margin-top: 40px;
+      }
+
+      .testimonial {
+        background: #ffffff;
+        border-left: 4px solid #0078d7;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      .testimonial p {
+        font-style: italic;
+      }
+
+      .testimonial-author {
+        font-weight: bold;
+        text-align: right;
+      }
+
+      .partners-section {
+        text-align: center;
+      }
+
+      .partners-logos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 20px;
+      }
+
+      .partner-logo {
+        width: 150px;
+        height: 80px;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 768px) {
+        .mission-values {
+          grid-template-columns: 1fr;
+        }
+
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .team-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🎨 ArtAble</h1>
+      <p>Empowering creators with disabilities to showcase their talent</p>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="artists.html">Our Artists</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+        </ul>
+        <div class="search-filter">
+          <input type="text" id="search" placeholder="Search by tag..." />
+          <select id="category-filter">
+            <option value="">All Categories</option>
+            <option value="Art">Art</option>
+            <option value="Clay">Clay</option>
+            <option value="Music">Music</option>
+            <option value="Books">Books</option>
+          </select>
+        </div>
+      </nav>
+    </header>
+
+    <div class="about-container">
+      <div class="about-header">
+        <h1>Our Story</h1>
+        <p>
+          Building a platform where art and accessibility create opportunity
+        </p>
+      </div>
+
+      <div class="about-section">
+        <h2>Who We Are</h2>
+        <p>
+          ArtAble was founded in 2023 with a simple yet powerful mission: to
+          create an inclusive marketplace where artists with disabilities can
+          showcase their incredible talents and connect directly with art lovers
+          worldwide.
+        </p>
+        <p>
+          What began as a small community project has blossomed into a thriving
+          platform representing hundreds of artists across multiple
+          disciplines—from visual arts and sculpture to music, literature, and
+          digital creations. We believe that art transcends physical limitations
+          and that every artist deserves equal opportunities to share their
+          unique perspective with the world.
+        </p>
+        <p>
+          Our team is made up of artists, accessibility advocates, and
+          technology specialists who work together to ensure that ArtAble
+          remains not just accessible, but truly empowering for creators of all
+          abilities.
+        </p>
+      </div>
+
+      <div class="about-section">
+        <h2>Our Mission & Values</h2>
+        <p>
+          At ArtAble, we're driven by the belief that artistic expression should
+          be accessible to everyone—both creators and appreciators alike. Our
+          platform exists to break down barriers and create economic
+          opportunities for artists with disabilities while connecting them with
+          a community that values their work.
+        </p>
+
+        <div class="mission-values">
+          <div class="value-card">
+            <h3>Inclusivity</h3>
+            <p>
+              We design every aspect of our platform with accessibility in mind,
+              ensuring that artists of all abilities can participate fully and
+              independently.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <h3>Economic Empowerment</h3>
+            <p>
+              We're committed to fair compensation practices, ensuring artists
+              receive the majority of proceeds from their sales while providing
+              them with business tools to thrive.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <h3>Community</h3>
+            <p>
+              ArtAble fosters meaningful connections between artists, patrons,
+              and advocates, creating a supportive ecosystem for creative
+              growth.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-section">
+        <h2>Meet The Team</h2>
+        <p>
+          Our diverse team brings together expertise in art, accessibility,
+          technology, and business to create an exceptional platform for our
+          community.
+        </p>
+
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="/api/placeholder/150/150" alt="Photo of Maya Johnson" />
+            <h3>Maya Johnson</h3>
+            <p>Founder & Director</p>
+          </div>
+
+          <div class="team-member">
+            <img src="/api/placeholder/150/150" alt="Photo of David Chen" />
+            <h3>David Chen</h3>
+            <p>Head of Artist Relations</p>
+          </div>
+
+          <div class="team-member">
+            <img
+              src="/api/placeholder/150/150"
+              alt="Photo of Sophia Rodriguez"
+            />
+            <h3>Sophia Rodriguez</h3>
+            <p>Accessibility Specialist</p>
+          </div>
+
+          <div class="team-member">
+            <img
+              src="/api/placeholder/150/150"
+              alt="Photo of Marcus Williams"
+            />
+            <h3>Marcus Williams</h3>
+            <p>Technology Lead</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-section">
+        <h2>Impact Stories</h2>
+        <p>
+          Our success is measured by the positive change we bring to artists'
+          lives and the broader community.
+        </p>
+
+        <div class="testimonials">
+          <div class="testimonial">
+            <p>
+              "ArtAble completely transformed my career as an artist. Before
+              finding this platform, I struggled to find galleries willing to
+              showcase my work. Now I have a thriving online business and have
+              connected with collectors worldwide who appreciate my unique
+              perspective."
+            </p>
+            <div class="testimonial-author">— Elena Patel, Digital Artist</div>
+          </div>
+
+          <div class="testimonial">
+            <p>
+              "The inclusive design of ArtAble's platform means I can manage my
+              entire art business independently. The team understood
+              accessibility needs from day one, and it shows in every feature
+              they've built."
+            </p>
+            <div class="testimonial-author">— James Rodriguez, Musician</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-section partners-section">
+        <h2>Our Partners</h2>
+        <p>
+          We collaborate with organizations committed to accessibility, arts
+          education, and disability advocacy to create a more inclusive creative
+          economy.
+        </p>
+
+        <div class="partners-logos">
+          <div class="partner-logo">Partner 1</div>
+          <div class="partner-logo">Partner 2</div>
+          <div class="partner-logo">Partner 3</div>
+          <div class="partner-logo">Partner 4</div>
+        </div>
+      </div>
+
+      <div class="about-section">
+        <h2>Join Our Mission</h2>
+        <p>There are many ways to be part of the ArtAble community:</p>
+        <ul>
+          <li>Shop our marketplace and support artists directly</li>
+          <li>Spread the word about our artists' work</li>
+          <li>
+            Apply to become a featured artist if you're a creator with a
+            disability
+          </li>
+          <li>Partner with us as an organization or business</li>
+          <li>Volunteer your skills to help our platform grow</li>
+        </ul>
+        <p>
+          Reach out to us through our
+          <a href="index.html#contact">contact form</a> to learn more about
+          getting involved.
+        </p>
+      </div>
+    </div>
+
+    <section id="contact">
+      <h2>📬 Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          placeholder="Your Message..."
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+        <p id="msg-status"></p>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 ArtAble | Built for Code4Change</p>
+      <small><a href="admin.html">Admin Access</a></small>
+    </footer>
+  </body>
+</html>

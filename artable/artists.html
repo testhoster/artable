@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Artists - ArtAble</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Additional styles specific to the artists page */
+      .artists-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .artist-card {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .artist-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .artist-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .artist-info {
+        padding: 20px;
+      }
+
+      .artist-name {
+        font-size: 1.4rem;
+        margin: 0 0 10px 0;
+        color: #0078d7;
+      }
+
+      .artist-specialty {
+        color: #555;
+        font-style: italic;
+        margin-bottom: 10px;
+      }
+
+      .artist-bio {
+        margin-bottom: 15px;
+        line-height: 1.5;
+      }
+
+      .artist-links {
+        display: flex;
+        gap: 10px;
+      }
+
+      .artist-link {
+        display: inline-block;
+        padding: 8px 15px;
+        background-color: #0078d7;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+
+      .artist-link:hover {
+        background-color: #0056a3;
+      }
+
+      .artist-link.portfolio {
+        background-color: #6d28d9;
+      }
+
+      .artist-link.portfolio:hover {
+        background-color: #5b21b6;
+      }
+
+      .page-title {
+        text-align: center;
+        margin: 40px 0;
+        color: #333;
+      }
+
+      .artist-filters {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        padding: 8px 16px;
+        background-color: #f0f0f0;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background-color: #0078d7;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        .artists-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🎨 ArtAble</h1>
+      <p>Empowering creators with disabilities to showcase their talent</p>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="artists.html">Our Artists</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+        </ul>
+        <div class="search-filter">
+          <input
+            type="text"
+            id="artist-search"
+            placeholder="Search artists..."
+          />
+          <select id="medium-filter">
+            <option value="">All Mediums</option>
+            <option value="painting">Painting</option>
+            <option value="sculpture">Sculpture</option>
+            <option value="digital">Digital Art</option>
+            <option value="music">Music</option>
+            <option value="literature">Literature</option>
+          </select>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="page-title">Meet Our Talented Artists</h1>
+
+      <div class="artist-filters">
+        <button class="filter-btn active" data-filter="all">All Artists</button>
+        <button class="filter-btn" data-filter="featured">Featured</button>
+        <button class="filter-btn" data-filter="new">New Additions</button>
+      </div>
+
+      <!-- Updated Artist Section with Indian Names and Context -->
+      <!-- Updated Artist Section with Indian Names and Real Image Links -->
+      <div class="artists-container">
+        <!-- Artist 1: Aarohi Desai -->
+        <div class="artist-card" data-categories="featured painting">
+          <img
+            src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
+            alt="Aarohi Desai painting a landscape"
+            class="artist-image"
+          />
+          <div class="artist-info">
+            <h2 class="artist-name">Aarohi Desai</h2>
+            <p class="artist-specialty">Painter, Visual Artist</p>
+            <p class="artist-bio">
+              Aarohi paints vivid landscapes inspired by Indian folk tales and
+              rural settings. Living with hearing impairment, she uses
+              expressive colors and textures to share her silent yet powerful
+              vision.
+            </p>
+            <div class="artist-links">
+              <a href="artist-aarohi.html" class="artist-link">View Gallery</a>
+              <a href="https://aarohidesai.art" class="artist-link portfolio"
+                >Portfolio</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Artist 2: Raghav Iyer -->
+        <div class="artist-card" data-categories="sculpture new">
+          <img
+            src="https://images.unsplash.com/photo-1622632684625-8b54dc0e648f"
+            alt="Raghav Iyer sculpting a clay statue"
+            class="artist-image"
+          />
+          <div class="artist-info">
+            <h2 class="artist-name">Raghav Iyer</h2>
+            <p class="artist-specialty">Sculptor, Ceramics</p>
+            <p class="artist-bio">
+              Raghav crafts detailed clay sculptures that reflect Indian
+              cultural themes. After his diagnosis with multiple sclerosis, he
+              embraced art as a medium of emotional healing and connection.
+            </p>
+            <div class="artist-links">
+              <a href="artist-raghav.html" class="artist-link">View Gallery</a>
+              <a href="https://raghaviyer.in" class="artist-link portfolio"
+                >Portfolio</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Artist 3: Priya Mehta -->
+        <div class="artist-card" data-categories="digital featured">
+          <img
+            src="https://images.unsplash.com/photo-1592503254549-d7d6a12c80b8"
+            alt="Priya Mehta working on digital art"
+            class="artist-image"
+          />
+          <div class="artist-info">
+            <h2 class="artist-name">Priya Mehta</h2>
+            <p class="artist-specialty">Digital Artist, Illustrator</p>
+            <p class="artist-bio">
+              Priya creates magical digital worlds using assistive tech. Despite
+              limited mobility, she brings inclusive and fantastical realms to
+              life that celebrate Indian mythos and futuristic imagination.
+            </p>
+            <div class="artist-links">
+              <a href="artist-priya.html" class="artist-link">View Gallery</a>
+              <a href="https://priyamehta.art" class="artist-link portfolio"
+                >Portfolio</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Artist 4: Arjun Verma -->
+        <div class="artist-card" data-categories="music">
+          <img
+            src="https://images.unsplash.com/photo-1578898888093-1bfb1d333c78"
+            alt="Arjun Verma playing sitar"
+            class="artist-image"
+          />
+          <div class="artist-info">
+            <h2 class="artist-name">Arjun Verma</h2>
+            <p class="artist-specialty">Musician, Composer</p>
+            <p class="artist-bio">
+              Arjun is a sitar virtuoso blending classical ragas with ambient
+              melodies. Visually impaired since birth, his deep sensitivity to
+              sound transforms his compositions into spiritual journeys.
+            </p>
+            <div class="artist-links">
+              <a href="artist-arjun.html" class="artist-link">Listen & Shop</a>
+              <a href="https://arjunverma.in" class="artist-link portfolio"
+                >Portfolio</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Artist 5: Neha Sharma -->
+        <div class="artist-card" data-categories="literature new">
+          <img
+            src="https://images.unsplash.com/photo-1544717302-de2939b7ef71"
+            alt="Neha Sharma writing poetry"
+            class="artist-image"
+          />
+          <div class="artist-info">
+            <h2 class="artist-name">Neha Sharma</h2>
+            <p class="artist-specialty">Author, Poet</p>
+            <p class="artist-bio">
+              Neha pens evocative stories and poems in Hindi and English,
+              touching on identity and inner journeys. As a neurodivergent
+              writer, she brings a raw honesty and lyrical beauty to her words.
+            </p>
+            <div class="artist-links">
+              <a href="artist-neha.html" class="artist-link">Read Excerpts</a>
+              <a href="https://nehasharma.in" class="artist-link portfolio"
+                >Portfolio</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Artist 6: Vikram Rao -->
+        <div class="artist-card" data-categories="painting featured">
+          <img
+            src="https://images.unsplash.com/photo-1611250201491-32796c26e20b"
+            alt="Vikram Rao painting with mouth"
+            class="artist-image"
+          />
+          <div class="artist-info">
+            <h2 class="artist-name">Vikram Rao</h2>
+            <p class="artist-specialty">Mouth Painter, Abstract Artist</p>
+            <p class="artist-bio">
+              Vikram paints abstract masterpieces using his mouth after a spinal
+              cord injury. His work reflects resilience, using vibrant colors to
+              communicate energy, motion, and emotion.
+            </p>
+            <div class="artist-links">
+              <a href="artist-vikram.html" class="artist-link">View Gallery</a>
+              <a href="https://vikramrao.art" class="artist-link portfolio"
+                >Portfolio</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section id="contact">
+      <h2>📬 Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          placeholder="Your Message..."
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+        <p id="msg-status"></p>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 ArtAble | Built for Code4Change</p>
+      <small><a href="admin.html">Admin Access</a></small>
+    </footer>
+
+    <script>
+      // Simple filtering functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const artistCards = document.querySelectorAll(".artist-card");
+        const searchInput = document.getElementById("artist-search");
+        const mediumFilter = document.getElementById("medium-filter");
+
+        // Filter buttons
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            // Add active class to clicked button
+            this.classList.add("active");
+
+            const filter = this.getAttribute("data-filter");
+
+            artistCards.forEach((card) => {
+              if (filter === "all") {
+                card.style.display = "block";
+              } else {
+                const categories = card.getAttribute("data-categories");
+                if (categories.includes(filter)) {
+                  card.style.display = "block";
+                } else {
+                  card.style.display = "none";
+                }
+              }
+            });
+          });
+        });
+
+        // Search functionality
+        searchInput.addEventListener("input", filterArtists);
+        mediumFilter.addEventListener("change", filterArtists);
+
+        function filterArtists() {
+          const searchTerm = searchInput.value.toLowerCase();
+          const mediumTerm = mediumFilter.value.toLowerCase();
+
+          artistCards.forEach((card) => {
+            const artistInfo = card
+              .querySelector(".artist-info")
+              .textContent.toLowerCase();
+            const categories = card
+              .getAttribute("data-categories")
+              .toLowerCase();
+
+            const matchesSearch =
+              searchTerm === "" || artistInfo.includes(searchTerm);
+            const matchesMedium =
+              mediumTerm === "" || categories.includes(mediumTerm);
+
+            if (matchesSearch && matchesMedium) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

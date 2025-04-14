@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArtAble - Shop Inclusive</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🎨 ArtAble</h1>
+      <p>Unleashing Hidden Talents for a Better Tomorrow</p>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="artists.html">Our Artists</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+        <div class="search-filter">
+          <input type="text" id="search" placeholder="Search by tag..." />
+          <select id="category-filter">
+            <option value="">All Categories</option>
+            <option value="Art">Art</option>
+            <option value="Clay">Clay</option>
+            <option value="Music">Music</option>
+            <option value="Books">Books</option>
+          </select>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="products"></section>
+      <aside id="cart">
+        <h2>🛒 Cart</h2>
+        <ul id="cart-items"></ul>
+        <div id="cart-total">Total: $0</div>
+        <button id="checkout-btn" disabled>Checkout</button>
+      </aside>
+    </main>
+
+    <section id="contact">
+      <h2>📬 Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          placeholder="Your Message..."
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+        <p id="msg-status"></p>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 ArtAble | Built for Code4Change</p>
+      <small><a href="admin.html">Admin Access</a></small>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
